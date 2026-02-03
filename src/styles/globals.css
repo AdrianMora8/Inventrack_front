@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-200;
+  }
+
+  body {
+    @apply bg-dark-200 text-text-primary font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-text-primary;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply bg-dark-100 text-text-primary border-dark-200;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-text-muted;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-100 text-text-primary hover:bg-dark-200 focus:ring-primary-500;
+  }
+
+  .btn-danger {
+    @apply bg-danger-600 text-white hover:bg-danger-700 focus:ring-danger-500;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 bg-dark-100 text-text-primary border border-dark-200 rounded-md shadow-sm placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
+  }
+
+  .card {
+    @apply bg-dark-100 rounded-md shadow-sm border border-dark-200;
+  }
+
+  .table-row {
+    @apply border-b border-dark-200 hover:bg-dark-200 transition-colors;
+  }
+}
